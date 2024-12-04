@@ -60,11 +60,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "angular-conduit:build:production"
-            },
             "development": {
-              "buildTarget": "angular-conduit:build:development"
+              "buildTarget": "angular-conduit:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
