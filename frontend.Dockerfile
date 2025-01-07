@@ -5,13 +5,13 @@ FROM node:20 AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY conduit-frontend/package*.json ${WORKDIR}
+COPY package*.json ${WORKDIR}
 
 # Install dependencies using npm with faster options
 RUN npm install --legacy-peer-deps --prefer-offline --no-audit
 
 # Copy the project files
-COPY conduit-frontend/ ${WORKDIR}
+COPY . ${WORKDIR}
 
 # Build the Angular application for production
 RUN npm run build --prod

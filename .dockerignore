@@ -1,0 +1,16 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+dist/
+out-tsc/
+
+.idea/
+.vscode/
+.DS_Store
+
+.env
+*.env
+
+*.spec.ts
